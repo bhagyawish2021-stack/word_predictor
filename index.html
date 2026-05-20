@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Word Predictor - AI Typing Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    <div class="background-blur"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-brand">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">NextWord</span>
+            </div>
+            <div class="navbar-stats">
+                <div class="stat-item">
+                    <span class="stat-label">Status</span>
+                    <span class="stat-value">
+                        <span class="status-dot"></span>
+                        Active
+                    </span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <h1 class="hero-title">
+                Type Smarter with
+                <span class="gradient-text">AI Predictions</span>
+            </h1>
+            <p class="hero-subtitle">Real-time word predictions powered by machine learning</p>
+        </div>
+        
+        <!-- Main Application Card -->
+        <div class="app-card">
+            <!-- Input Section -->
+            <div class="input-wrapper">
+                <div class="input-container">
+                    <textarea
+                        id="inputText"
+                        class="input-field"
+                        placeholder="Start typing to see AI predictions..."
+                        spellcheck="false"
+                    ></textarea>
+                    <div class="input-glow"></div>
+                </div>
+                
+                <!-- Input Stats -->
+                <div class="input-stats">
+                    <div class="stat">
+                        <span class="stat-label">Words:</span>
+                        <span class="stat-value" id="wordCount">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Characters:</span>
+                        <span class="stat-value" id="charCount">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Speed:</span>
+                        <span class="stat-value" id="typingSpeed">0 wpm</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Predictions Section -->
+            <div class="predictions-wrapper">
+                <div class="predictions-label">
+                    <span class="label-text">Next Word Predictions</span>
+                    <span class="ai-badge">
+                        <span class="pulse"></span>
+                        Powered by AI
+                    </span>
+                </div>
+                
+                <div class="predictions-container" id="predictionsContainer">
+                    <div class="empty-state">
+                        <span class="empty-icon">🎯</span>
+                        <p>Start typing to see predictions</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button id="clearBtn" class="btn btn-secondary">
+                    <span class="btn-icon">🗑️</span>
+                    Clear
+                </button>
+                <button id="copyBtn" class="btn btn-primary">
+                    <span class="btn-icon">📋</span>
+                    Copy Text
+                </button>
+            </div>
+        </div>
+        
+        <!-- Features Grid -->
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Real-Time Predictions</h3>
+                <p>Get suggestions as you type with instant updates</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3>AI-Powered</h3>
+                <p>Advanced N-gram language model for accurate predictions</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <h3>Fully Responsive</h3>
+                <p>Works seamlessly on mobile, tablet, and desktop</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚙️</div>
+                <h3>Privacy First</h3>
+                <p>All processing happens locally on your device</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+    
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
