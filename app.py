@@ -1,8 +1,3 @@
-"""
-Next Word Predictor - Flask Backend
-A modern AI-powered typing assistant for real-time word prediction
-"""
-
 from flask import Flask, render_template, request, jsonify
 import predictor
 import logging
